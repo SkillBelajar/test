@@ -13,4 +13,6 @@ jobs:
         username: stai
         password: annadwah2024
         port: 2244
-        script: whoami
+        script: |
+          cd /home
+          mkdir coba2
