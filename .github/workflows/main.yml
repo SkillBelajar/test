@@ -14,5 +14,5 @@ jobs:
         password: annadwah2024
         port: 2244
         script: |
-          cd /home
+          cd /home/coba
           mkdir coba2
