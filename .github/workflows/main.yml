@@ -1,0 +1,24 @@
+name: SSH Command Execution
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: SSH command execution
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: 89.116.211.69
+          username: dell
+          password: tik
+          port: 22
+          script: |
+            # Deploy aplikasi ke server
+            cd /oke
+            mkdir ok2
