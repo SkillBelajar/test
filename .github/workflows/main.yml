@@ -14,11 +14,11 @@ jobs:
       - name: SSH command execution
         uses: appleboy/ssh-action@v0.1.7
         with:
-          host: 89.116.211.69
-          username: dell
-          password: tik
-          port: 22
+          host: 103.126.238.246
+          username: stai
+          password: annadwah2024
+          port: 2244
           script: |
             # Deploy aplikasi ke server
-            cd /oke
+            cd /home
             mkdir ok2
