@@ -1,24 +1,16 @@
-name: SSH Command Execution
-
-on:
-  push:
-    branches: [ main ]
-
+name: remote ssh command
+on: [push]
 jobs:
+
   build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: SSH command execution
-        uses: appleboy/ssh-action@v0.1.7
-        with:
-          host: 103.126.238.246
-          username: stai
-          password: annadwah2024
-          port: 2244
-          script: |
-            # Deploy aplikasi ke server
-            cd /home
-            mkdir ok2
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: 103.126.238.246
+        username: stai
+        password: annadwah2024
+        port: 2244
+        script: whoami
